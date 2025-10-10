@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Health Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz" id="quiz-page">
+        <div class="progress" id="progress"></div>
+        <div class="question" id="question-container"></div>
+        <button id="next-btn" disabled>Continue</button>
+    </div>
+
+    <div class="results" id="results-page" style="display:none;">
+        <div class="score" id="final-score"></div>
+        <div class="actions">
+            <input type="email" id="email" placeholder="your@email.com" required>
+            <button id="submit-btn">Get Report</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
