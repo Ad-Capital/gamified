@@ -132,35 +132,35 @@ export default function Home() {
   };
 
   const handleSubmit = async () => {
-    if (email) {
-      try {
-        setSubmitted(true);
+    // if (email) {
+    //   try {
+    //     setSubmitted(true);
         
-        const response = await fetch('/api/send-report', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email,
-            score,
-            percentage,
-            maxScore,
-            answers
-          }),
-        });
+    //     const response = await fetch('/api/send-report', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({
+    //         email,
+    //         score,
+    //         percentage,
+    //         maxScore,
+    //         answers
+    //       }),
+    //     });
 
-        if (!response.ok) {
-          throw new Error('Failed to send report');
-        }
+    //     if (!response.ok) {
+    //       throw new Error('Failed to send report');
+    //     }
 
-        console.log('Report sent successfully');
-      } catch (error) {
-        console.error('Failed to send report:', error);
-        setSubmitted(false);
-        // error state handlingings
-      }
-    }
+    //     console.log('Report sent successfully');
+    //   } catch (error) {
+    //     console.error('Failed to send report:', error);
+    //     setSubmitted(false);
+    //     // error state handlingings
+    //   }
+    // }
   };
 
   const percentage = Math.round((score / maxScore) * 100);
